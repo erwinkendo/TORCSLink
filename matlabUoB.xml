@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  Driver definitions, part of TORCSLink
+  Driver definitions, part of TORCSLinkUoB
+	Copyright(C) 2017 Erwin Lopez
 	Copyright(C) 2014 Owen McAree
 
 	This program is free software : you can redistribute it and / or modify
@@ -19,14 +20,14 @@
 
 <!DOCTYPE params SYSTEM "../../libs/tgf/params.dtd">
 
-<params name="matlab" type="robotdef">
+<params name="matlabUoB" type="robotdef">
   <section name="Robots">
     <section name="index">
 
       <section name="0">
-        <attstr name="name" val="matlab 0"></attstr>
+        <attstr name="name" val="matlabUoB 0"></attstr>
         <attstr name="desc" val=""></attstr>
-        <attstr name="team" val="matlab"></attstr>
+        <attstr name="team" val="matlabUoB"></attstr>
         <attstr name="author" val="Owen McAree"></attstr>
         <attstr name="car name" val="p406"></attstr>
         <attnum name="race number" val="0"></attnum>
@@ -36,9 +37,9 @@
       </section>
 
       <section name="1">
-        <attstr name="name" val="matlab 1"></attstr>
+        <attstr name="name" val="matlabUoB 1"></attstr>
         <attstr name="desc" val=""></attstr>
-        <attstr name="team" val="matlab"></attstr>
+        <attstr name="team" val="matlabUoB"></attstr>
         <attstr name="author" val="Owen McAree"></attstr>
         <attstr name="car name" val="p406"></attstr>
         <attnum name="race number" val="1"></attnum>
@@ -48,9 +49,9 @@
       </section>
 
       <section name="2">
-        <attstr name="name" val="matlab 2"></attstr>
+        <attstr name="name" val="matlabUoB 2"></attstr>
         <attstr name="desc" val=""></attstr>
-        <attstr name="team" val="matlab"></attstr>
+        <attstr name="team" val="matlabUoB"></attstr>
         <attstr name="author" val="Owen McAree"></attstr>
         <attstr name="car name" val="p406"></attstr>
         <attnum name="race number" val="2"></attnum>
@@ -60,9 +61,9 @@
       </section>
 
       <section name="3">
-        <attstr name="name" val="matlab 3"></attstr>
+        <attstr name="name" val="matlabUoB 3"></attstr>
         <attstr name="desc" val=""></attstr>
-        <attstr name="team" val="matlab"></attstr>
+        <attstr name="team" val="matlabUoB"></attstr>
         <attstr name="author" val="Owen McAree"></attstr>
         <attstr name="car name" val="p406"></attstr>
         <attnum name="race number" val="3"></attnum>
@@ -72,9 +73,9 @@
       </section>
 
       <section name="4">
-        <attstr name="name" val="matlab 4"></attstr>
+        <attstr name="name" val="matlabUoB 4"></attstr>
         <attstr name="desc" val=""></attstr>
-        <attstr name="team" val="matlab"></attstr>
+        <attstr name="team" val="matlabUoB"></attstr>
         <attstr name="author" val="Owen McAree"></attstr>
         <attstr name="car name" val="p406"></attstr>
         <attnum name="race number" val="4"></attnum>
@@ -84,9 +85,9 @@
       </section>
 
       <section name="5">
-        <attstr name="name" val="matlab 5"></attstr>
+        <attstr name="name" val="matlabUoB 5"></attstr>
         <attstr name="desc" val=""></attstr>
-        <attstr name="team" val="matlab"></attstr>
+        <attstr name="team" val="matlabUoB"></attstr>
         <attstr name="author" val="Owen McAree"></attstr>
         <attstr name="car name" val="p406"></attstr>
         <attnum name="race number" val="5"></attnum>
@@ -96,9 +97,9 @@
       </section>
 
       <section name="6">
-        <attstr name="name" val="matlab 6"></attstr>
+        <attstr name="name" val="matlabUoB 6"></attstr>
         <attstr name="desc" val=""></attstr>
-        <attstr name="team" val="matlab"></attstr>
+        <attstr name="team" val="matlabUoB"></attstr>
         <attstr name="author" val="Owen McAree"></attstr>
         <attstr name="car name" val="p406"></attstr>
         <attnum name="race number" val="6"></attnum>
@@ -108,9 +109,9 @@
       </section>
 
       <section name="7">
-        <attstr name="name" val="matlab 7"></attstr>
+        <attstr name="name" val="matlabUoB 7"></attstr>
         <attstr name="desc" val=""></attstr>
-        <attstr name="team" val="matlab"></attstr>
+        <attstr name="team" val="matlabUoB"></attstr>
         <attstr name="author" val="Owen McAree"></attstr>
         <attstr name="car name" val="p406"></attstr>
         <attnum name="race number" val="7"></attnum>
@@ -120,9 +121,9 @@
       </section>
 
       <section name="8">
-        <attstr name="name" val="matlab 8"></attstr>
+        <attstr name="name" val="matlabUoB 8"></attstr>
         <attstr name="desc" val=""></attstr>
-        <attstr name="team" val="matlab"></attstr>
+        <attstr name="team" val="matlabUoB"></attstr>
         <attstr name="author" val="Owen McAree"></attstr>
         <attstr name="car name" val="p406"></attstr>
         <attnum name="race number" val="8"></attnum>
@@ -132,9 +133,9 @@
       </section>
 
       <section name="9">
-        <attstr name="name" val="matlab 9"></attstr>
+        <attstr name="name" val="matlabUoB 9"></attstr>
         <attstr name="desc" val=""></attstr>
-        <attstr name="team" val="matlab"></attstr>
+        <attstr name="team" val="matlabUoB"></attstr>
         <attstr name="author" val="Owen McAree"></attstr>
         <attstr name="car name" val="p406"></attstr>
         <attnum name="race number" val="9"></attnum>

@@ -77,3 +77,9 @@ slprj/
 *.so
 *.o
 *.depend
+
+# Windows default autosave extension
+*.asv
+
+# OSX / *nix default autosave extension
+*.m~

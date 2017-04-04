@@ -1,5 +1,6 @@
-/*  TORCSLink, an interface between TORCS and MATLAB/Simulink
+﻿/*  TORCSLink, an interface between TORCS and MATLAB/Simulink
 	Copyright(C) 2014 Owen McAree
+	Copyright(C) 2017 Erwin Lopez
 
 	This program is free software : you can redistribute it and / or modify
 	it under the terms of the GNU General Public License as published by
@@ -30,11 +31,11 @@
 
 /* Enable this if you have modified your TORCS sourcecode to perform integration of 
 position data in doule precision rather than the default float. See <Insert link here> */
-#define TL_USE_DOUBLE_POSITION
+//#define TL_USE_DOUBLE_POSITION
 
 /* Enale this if you have modified your TORCS sourcecode to allow robots to restart races
 See here: http://torcs.sourceforge.net/index.php?name=Sections&op=viewarticle&artid=30#c6_8 */
-#define TL_ENABLE_RESTARTS
+//#define TL_ENABLE_RESTARTS
 
 
 /* Number of vehicles 
@@ -61,16 +62,31 @@ typedef struct vehicleControlStruct {
 
 /* Vehicle Data */
 typedef struct vehicleDataStruct {
-	double position[3];			/* Global position [m] */
-	double velocity[3];			/* Global velocity [m/s] */
+	double angleP;					/*Angle between the car direction and the direction of the track axis [- π, +π] (rad)*/
+	double curLapTime;				/*Time elapsed during current lap.[0, +∞) (s)*/
+	double distFromStart;			/*Distance of the car from the start line along the track line.[0, +∞) (m)*/
+	double totalDistFromStart;		/*Distance covered by the car from the beginning of the race.[0, +∞) (m)*/
+	double fuel;					/*Current fuel level.[0, +∞) (l)*/
+	double gear;					/*Current gear : -1 is reverse, 0 is neutral and the gear from 1 to 6. {-1,0,1,· · · 6}*/
+	double lastLapTime;				/*Time to complete the last lap.[0, +∞) (s)*/
+	// TODO try this?
+	//double opponents[36];
+	double racePos;					/*Position in the race with respect to other cars. {1, 2, · · ·, N}*/
+	double track[19];				/*Vector of 19 range finder sensors : each sensors returns the distance between the track edge and the car within a range of 200 meters.By default, the sensors sample the space in front of the car every 10 degrees, spanning clockwise from - 90 degrees up to + 90 degrees with respect to the car axis.However, the configuration of the range finder sensors(i.e., the angle w.r.t.	to the car axis) can be set by the client once during initialization, i.e., before the beginning of each race.When the car is outside of the track(i.e., pos is less than - 1 or greater than 1), the returned values are not reliable(typically - 1 is returned). [0,200] (m)*/
+	double trackPos;				/*Distance between the car and the track axis.The value is normalized w.r.t to the track width : it is 0 when car is on the axis, -1 when the car is on the right edge of the track and +1 when it is on the left edge of the car.Values greater than 1 or smaller than - 1 mean that the car is outside of the track. (−∞,+∞)*/
+	double wheelSpinVel[4];			/*Vector of 4 sensors representing the rotation speed of wheels.[0, +∞](rad / s)*/
+	double z;						/*Distance of the car mass center from the surface of the track along the Z axis.[−∞, +∞](m)*/
+	double focus[5];				/*Vector of 5 range finder sensors : each sensor returns the distance between the track edge and the car within a range of 200 meters.The sensors sample, with a resolution of one degree, a five degree space along a specific direction provided by the client(the direction is defined with the focus command and must be in the range[-90, +90] degrees w.r.t.the car axis).Focus sensors are not always available : they can be used only once per second of simulated time.When the car is outside of the track (i.e., pos is less than - 1 or greater than 1), the focus direction is outside the allowed range([-90, +90] degrees) or the	sensors has been already used once in the last second, the returned values are not reliable(typically - 1 is returned). [0,200] (m)*/
+	double position[3];				/* Global position [m] */
+	double velocity[3];				/* Global velocity [m/s] */
 	double acceleration[3];			/* Global acceleration [m/s/s] */
-	double angle[3];			/* Roll/Pitch/Yaw [rad] */
+	double angle[3];				/* Roll/Pitch/Yaw [rad] */
 	double angularVelocity[3];		/* Roll/Pitch/Yaw rates [rad/s] */
 	double headingError;			/* Error between vehicle heading and track heading (at current location) [rad] */
 	double lateralError;			/* Lateral error between car (CoG) and track centreline (at current location) [m] */
 	double roadDistance;			/* Distance travelled along track from start/finish line [m] */
 	double roadCurvature;			/* Curvature of track (at current location), left turns = +ve curvature, right turns = -ve curvature */
-	double engineRPM;			/* Engine RPM */
+	double engineRPM;				/* Engine RPM */
 } vehicleData_t;
 
 /* Total vehicle data */
@@ -88,10 +104,10 @@ typedef struct TOCSDataStruct {
 
 /* Location of shared memory */
 #ifdef _WIN32
-	TCHAR FileMapName[] = TEXT("Local\\TORCSDataStore");
+	TCHAR FileMapName[] = TEXT("Local\\TORCSUOBDataStore");
 	HANDLE hMapFile;
 #elif __linux__
-	const char * FileMapName = "/TORCSDataStore";
+	const char * FileMapName = "/TORCSUOBDataStore";
 	int hMapFile;
 #endif
 

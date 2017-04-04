@@ -17,7 +17,7 @@
 #
 ##############################################################################
 
-ROBOT       = matlab
+ROBOT       = matlabUoB
 MODULE      = ${ROBOT}.so
 MODULEDIR   = drivers/${ROBOT}
 SOURCES     = ${ROBOT}.cpp

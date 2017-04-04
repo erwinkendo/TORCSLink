@@ -1,24 +1,24 @@
-# Microsoft Developer Studio Project File - Name="matlab" - Package Owner=<4>
+# Microsoft Developer Studio Project File - Name="matlabUoB" - Package Owner=<4>
 # Microsoft Developer Studio Generated Build File, Format Version 6.00
 # ** NICHT BEARBEITEN **
 
 # TARGTYPE "Win32 (x86) Dynamic-Link Library" 0x0102
 
-CFG=matlab - Win32 Debug
+CFG=matlabUoB - Win32 Debug
 !MESSAGE Dies ist kein gültiges Makefile. Zum Erstellen dieses Projekts mit NMAKE
 !MESSAGE verwenden Sie den Befehl "Makefile exportieren" und führen Sie den Befehl
 !MESSAGE 
-!MESSAGE NMAKE /f "matlab.mak".
+!MESSAGE NMAKE /f "matlabUoB.mak".
 !MESSAGE 
 !MESSAGE Sie können beim Ausführen von NMAKE eine Konfiguration angeben
 !MESSAGE durch Definieren des Makros CFG in der Befehlszeile. Zum Beispiel:
 !MESSAGE 
-!MESSAGE NMAKE /f "matlab.mak" CFG="matlab - Win32 Debug"
+!MESSAGE NMAKE /f "matlabUoB.mak" CFG="matlabUoB - Win32 Debug"
 !MESSAGE 
 !MESSAGE Für die Konfiguration stehen zur Auswahl:
 !MESSAGE 
-!MESSAGE "matlab - Win32 Release" (basierend auf  "Win32 (x86) Dynamic-Link Library")
-!MESSAGE "matlab - Win32 Debug" (basierend auf  "Win32 (x86) Dynamic-Link Library")
+!MESSAGE "matlabUoB - Win32 Release" (basierend auf  "Win32 (x86) Dynamic-Link Library")
+!MESSAGE "matlabUoB - Win32 Debug" (basierend auf  "Win32 (x86) Dynamic-Link Library")
 !MESSAGE 
 
 # Begin Project
@@ -29,7 +29,7 @@ CPP=cl.exe
 MTL=midl.exe
 RSC=rc.exe
 
-!IF  "$(CFG)" == "matlab - Win32 Release"
+!IF  "$(CFG)" == "matlabUoB - Win32 Release"
 
 # PROP BASE Use_MFC 0
 # PROP BASE Use_Debug_Libraries 0
@@ -42,8 +42,8 @@ RSC=rc.exe
 # PROP Intermediate_Dir "Release"
 # PROP Ignore_Export_Lib 1
 # PROP Target_Dir ""
-# ADD BASE CPP /nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "matlab_EXPORTS" /YX /FD /c
-# ADD CPP /nologo /G6 /MT /W2 /GX /O2 /Ob2 /I "../../../export/include" /I "../../windows/include" /I "../../.." /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "matlab_EXPORTS" /FD /c
+# ADD BASE CPP /nologo /MT /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "MATLABUOB_EXPORTS" /YX /FD /c
+# ADD CPP /nologo /G6 /MT /W2 /GX /O2 /Ob2 /I "../../../export/include" /I "../../windows/include" /I "../../.." /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "MATLABUOB_EXPORTS" /FD /c
 # SUmatlabRACT CPP /YX
 # ADD BASE MTL /nologo /D "NDEBUG" /mktyplib203 /win32
 # ADD MTL /nologo /D "NDEBUG" /mktyplib203 /win32
@@ -59,10 +59,10 @@ LINK32=link.exe
 WkspDir=.
 TargetDir=.\Release
 SOURCE="$(InputPath)"
-PostBuild_Cmds=copy $(TargetDir)\*.dll $(WkspDir)\runtime\drivers\matlab
+PostBuild_Cmds=copy $(TargetDir)\*.dll $(WkspDir)\runtime\drivers\matlabUoB
 # End Special Build Tool
 
-!ELSEIF  "$(CFG)" == "matlab - Win32 Debug"
+!ELSEIF  "$(CFG)" == "matlabUoB - Win32 Debug"
 
 # PROP BASE Use_MFC 0
 # PROP BASE Use_Debug_Libraries 1
@@ -75,8 +75,8 @@ PostBuild_Cmds=copy $(TargetDir)\*.dll $(WkspDir)\runtime\drivers\matlab
 # PROP Intermediate_Dir "Debug"
 # PROP Ignore_Export_Lib 1
 # PROP Target_Dir ""
-# ADD BASE CPP /nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "matlab_EXPORTS" /YX /FD /GZ /c
-# ADD CPP /nologo /G6 /MTd /W2 /GX /Zi /Od /I "../../../export/include" /I "../../windows/include" /I "../../.." /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "matlab_EXPORTS" /D "DEBUG" /D "DEBUG_OUT" /FR /FD /GZ /c
+# ADD BASE CPP /nologo /MTd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "MATLABUOB_EXPORTS" /YX /FD /GZ /c
+# ADD CPP /nologo /G6 /MTd /W2 /GX /Zi /Od /I "../../../export/include" /I "../../windows/include" /I "../../.." /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D "_USRDLL" /D "MATLABUOB_EXPORTS" /D "DEBUG" /D "DEBUG_OUT" /FR /FD /GZ /c
 # SUmatlabRACT CPP /YX
 # ADD BASE MTL /nologo /D "_DEBUG" /mktyplib203 /win32
 # ADD MTL /nologo /D "_DEBUG" /mktyplib203 /win32
@@ -92,25 +92,25 @@ LINK32=link.exe
 WkspDir=.
 TargetDir=.\Debug
 SOURCE="$(InputPath)"
-PostBuild_Cmds=copy $(TargetDir)\*.dll $(WkspDir)\runtimed\drivers\matlab
+PostBuild_Cmds=copy $(TargetDir)\*.dll $(WkspDir)\runtimed\drivers\matlabUoB
 # End Special Build Tool
 
 !ENDIF 
 
 # Begin Target
 
-# Name "matlab - Win32 Release"
-# Name "matlab - Win32 Debug"
+# Name "matlabUoB - Win32 Release"
+# Name "matlabUoB - Win32 Debug"
 # Begin Group "Source Files"
 
 # PROP Default_Filter "cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
 # Begin Source File
 
-SOURCE=.\matlab.cpp
+SOURCE=.\matlabUoB.cpp
 # End Source File
 # Begin Source File
 
-SOURCE=.\matlab.def
+SOURCE=.\matlabUoB.def
 # End Source File
 # Begin Source File
 

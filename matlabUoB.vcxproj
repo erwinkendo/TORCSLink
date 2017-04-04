@@ -29,7 +29,8 @@
   <PropertyGroup Label="Globals">
     <SccProjectName />
     <SccLocalPath />
-    <ProjectGuid>{95189ECB-B10F-F905-E7EE-99584DAE0793}</ProjectGuid>
+    <ProjectGuid>{3A00D005-6E0D-4C78-BBB7-2961806D5252}</ProjectGuid>
+    <ProjectName>matlabUoB</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" Label="Configuration">
@@ -123,21 +124,21 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level2</WarningLevel>
       <AdditionalIncludeDirectories>../../../export/include;../../windows/include;../../..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;matlab_EXPORTS;DEBUG;DEBUG_OUT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;MATLABUOB_EXPORTS;DEBUG;DEBUG_OUT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
       <BrowseInformation>true</BrowseInformation>
-      <PrecompiledHeaderOutputFile>.\Debug\matlab.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile>.\Debug\matlabUob.pch</PrecompiledHeaderOutputFile>
       <ObjectFileName>.\Debug\</ObjectFileName>
       <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
     </ClCompile>
     <PostBuildEvent>
-      <Command>copy $(TargetDir)*.dll $(SolutionDir)runtimed\drivers\matlab</Command>
+      <Command>copy $(TargetDir)*.dll $(SolutionDir)runtimed\drivers\matlabUoB</Command>
     </PostBuildEvent>
     <Midl>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <TypeLibraryName>.\Debug\matlab.tlb</TypeLibraryName>
+      <TypeLibraryName>.\Debug\matlabUoB.tlb</TypeLibraryName>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
     </Midl>
@@ -147,7 +148,7 @@
     </ResourceCompile>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\Debug\matlab.bsc</OutputFile>
+      <OutputFile>.\Debug\matlabUoB.bsc</OutputFile>
     </Bscmake>
     <Link>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -155,11 +156,11 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <IgnoreSpecificDefaultLibraries>LIBCMT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <OutputFile>.\Debug\matlab.dll</OutputFile>
-      <ImportLibrary>.\Debug\matlab.lib</ImportLibrary>
+      <OutputFile>.\Debug\matlabUob.dll</OutputFile>
+      <ImportLibrary>.\Debug\matlabUob.lib</ImportLibrary>
       <AdditionalLibraryDirectories>../../../export/libd;../../windows/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>tgf.lib;robottools.lib;sg.lib;ul.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <ModuleDefinitionFile>.\matlab.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>.\matlabUob.def</ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -171,21 +172,21 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level2</WarningLevel>
       <AdditionalIncludeDirectories>../../../export/include;../../windows/include;../../..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;matlab_EXPORTS;DEBUG;DEBUG_OUT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;MATLABUOB_EXPORTS;DEBUG;DEBUG_OUT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
       <BrowseInformation>true</BrowseInformation>
-      <PrecompiledHeaderOutputFile>.\Debug\matlab.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile>.\Debug\matlabUoB.pch</PrecompiledHeaderOutputFile>
       <ObjectFileName>.\Debug\</ObjectFileName>
       <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
     </ClCompile>
     <PostBuildEvent>
-      <Command>copy $(TargetDir)*.dll $(SolutionDir)runtimed\drivers\matlab</Command>
+      <Command>copy $(TargetDir)*.dll $(SolutionDir)runtimed\drivers\matlabUoB</Command>
     </PostBuildEvent>
     <Midl>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <TypeLibraryName>.\Debug\matlab.tlb</TypeLibraryName>
+      <TypeLibraryName>.\Debug\matlabUoB.tlb</TypeLibraryName>
       <MkTypLibCompatible>true</MkTypLibCompatible>
     </Midl>
     <ResourceCompile>
@@ -194,7 +195,7 @@
     </ResourceCompile>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\Debug\matlab.bsc</OutputFile>
+      <OutputFile>.\Debug\matlabUoB.bsc</OutputFile>
     </Bscmake>
     <Link>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -202,11 +203,11 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
       <IgnoreSpecificDefaultLibraries>LIBCMT;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <OutputFile>.\Debug\matlab.dll</OutputFile>
-      <ImportLibrary>.\Debug\matlab.lib</ImportLibrary>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <ImportLibrary>.\Debug\matlabUoB.lib</ImportLibrary>
       <AdditionalLibraryDirectories>../../../export/libd;../../windows/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>tgf.lib;robottools.lib;sg.lib;ul.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <ModuleDefinitionFile>.\matlab.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>.\matlabUoB.def</ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -219,21 +220,21 @@
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level2</WarningLevel>
       <AdditionalIncludeDirectories>../../../export/include;../../windows/include;../../..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;matlab_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;MATLABUOB_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
-      <PrecompiledHeaderOutputFile>.\Release\matlab.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile>.\Release\matlabUob.pch</PrecompiledHeaderOutputFile>
       <ObjectFileName>.\Release\</ObjectFileName>
       <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
     </ClCompile>
     <PostBuildEvent>
-      <Command>mkdir $(SolutionDir)runtime\drivers\matlab
-copy $(TargetPath) $(SolutionDir)runtime\drivers\matlab
-copy $(ProjectDir)matlab.xml $(SolutionDir)runtime\drivers\matlab</Command>
+      <Command>mkdir $(SolutionDir)runtime\drivers\matlabUoB
+copy $(TargetPath) $(SolutionDir)runtime\drivers\matlabUoB
+copy $(ProjectDir)matlabUoB.xml $(SolutionDir)runtime\drivers\matlabUoB</Command>
     </PostBuildEvent>
     <Midl>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <TypeLibraryName>.\Release\matlab.tlb</TypeLibraryName>
+      <TypeLibraryName>.\Release\matlabUoB.tlb</TypeLibraryName>
       <MkTypLibCompatible>true</MkTypLibCompatible>
       <TargetEnvironment>Win32</TargetEnvironment>
     </Midl>
@@ -243,17 +244,17 @@ copy $(ProjectDir)matlab.xml $(SolutionDir)runtime\drivers\matlab</Command>
     </ResourceCompile>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\Release\matlab.bsc</OutputFile>
+      <OutputFile>.\Release\matlabUoB.bsc</OutputFile>
     </Bscmake>
     <Link>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <LinkDLL>true</LinkDLL>
       <SubSystem>Console</SubSystem>
-      <OutputFile>.\Release\matlab.dll</OutputFile>
-      <ImportLibrary>.\Release\matlab.lib</ImportLibrary>
+      <OutputFile>$(OutDir)\matlabUob.dll</OutputFile>
+      <ImportLibrary>.\Release\matlabUoB.lib</ImportLibrary>
       <AdditionalLibraryDirectories>../../../export/lib;../../windows/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>ws2_32.lib;tgf.lib;robottools.lib;sg.lib;ul.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <ModuleDefinitionFile>.\matlab.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>.\matlabUob.def</ModuleDefinitionFile>
       <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
     </Link>
   </ItemDefinitionGroup>
@@ -267,19 +268,19 @@ copy $(ProjectDir)matlab.xml $(SolutionDir)runtime\drivers\matlab</Command>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <WarningLevel>Level2</WarningLevel>
       <AdditionalIncludeDirectories>../../../export/include;../../windows/include;../../..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;matlab_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;MATLABUOB_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
-      <PrecompiledHeaderOutputFile>.\Release\matlab.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeaderOutputFile>.\Release\matlabUoB.pch</PrecompiledHeaderOutputFile>
       <ObjectFileName>.\Release\</ObjectFileName>
       <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
     </ClCompile>
     <PostBuildEvent>
-      <Command>copy $(TargetDir)*.dll $(SolutionDir)runtime\drivers\matlab</Command>
+      <Command>copy $(TargetDir)*.dll $(SolutionDir)runtime\drivers\matlabUoB</Command>
     </PostBuildEvent>
     <Midl>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <TypeLibraryName>.\Release\matlab.tlb</TypeLibraryName>
+      <TypeLibraryName>.\Release\matlabUoB.tlb</TypeLibraryName>
       <MkTypLibCompatible>true</MkTypLibCompatible>
     </Midl>
     <ResourceCompile>
@@ -288,36 +289,54 @@ copy $(ProjectDir)matlab.xml $(SolutionDir)runtime\drivers\matlab</Command>
     </ResourceCompile>
     <Bscmake>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <OutputFile>.\Release\matlab.bsc</OutputFile>
+      <OutputFile>.\Release\matlabUoB.bsc</OutputFile>
     </Bscmake>
     <Link>
       <SuppressStartupBanner>true</SuppressStartupBanner>
       <LinkDLL>true</LinkDLL>
       <SubSystem>Console</SubSystem>
-      <OutputFile>.\Release\matlab.dll</OutputFile>
-      <ImportLibrary>.\Release\matlab.lib</ImportLibrary>
+      <OutputFile>$(OutDir)\matlabUob.dll</OutputFile>
+      <ImportLibrary>.\Release\matlabUoB.lib</ImportLibrary>
       <AdditionalLibraryDirectories>../../../export/lib;../../windows/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>ws2_32.lib;tgf.lib;robottools.lib;sg.lib;ul.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <ModuleDefinitionFile>.\matlab.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>.\matlabUoB.def</ModuleDefinitionFile>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="matlab.cpp" />
+    <ClCompile Include="CarControl.cpp" />
+    <ClCompile Include="matlabUoB.cpp" />
+    <ClCompile Include="mycar.cpp" />
+    <ClCompile Include="ObstacleSensors.cpp" />
+    <ClCompile Include="pathfinder.cpp" />
+    <ClCompile Include="sensors.cpp" />
+    <ClCompile Include="SimpleParser.cpp" />
+    <ClCompile Include="spline.cpp" />
     <ClCompile Include="TORCSLink.c">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="trackdesc.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="matlab.def" />
+    <CustomBuild Include="matlabUoB.def" />
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="berniw.h" />
+    <ClInclude Include="CarControl.h" />
+    <ClInclude Include="linalg.h" />
+    <ClInclude Include="mycar.h" />
+    <ClInclude Include="ObstacleSensors.h" />
+    <ClInclude Include="pathfinder.h" />
+    <ClInclude Include="sensors.h" />
+    <ClInclude Include="SimpleParser.h" />
+    <ClInclude Include="spline.h" />
     <ClInclude Include="TORCSLink.h" />
+    <ClInclude Include="trackdesc.h" />
   </ItemGroup>
   <ItemGroup>
-    <Xml Include="matlab.xml">
+    <Xml Include="matlabUoB.xml">
       <SubType>Designer</SubType>
     </Xml>
   </ItemGroup>

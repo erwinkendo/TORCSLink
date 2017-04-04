@@ -2,7 +2,7 @@
 <VisualStudioProject
 	ProjectType="Visual C++"
 	Version="9.00"
-	Name="matlab"
+	Name="matlabUob"
 	ProjectGUID="{A0513CBB-8FE9-44F7-BBF3-7814EFB5132C}"
 	TargetFrameworkVersion="0"
 	>
@@ -43,17 +43,17 @@
 				MkTypLibCompatible="true"
 				SuppressStartupBanner="true"
 				TargetEnvironment="1"
-				TypeLibraryName=".\Debug/matlab.tlb"
+				TypeLibraryName=".\Debug/matlabUob.tlb"
 				HeaderFileName=""
 			/>
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
 				AdditionalIncludeDirectories="../../../export/include,../../windows/include,../../.."
-				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL;matlab_EXPORTS;DEBUG;DEBUG_OUT"
+				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL;MATLABUOB_EXPORTS;DEBUG;DEBUG_OUT"
 				BasicRuntimeChecks="3"
 				RuntimeLibrary="1"
-				PrecompiledHeaderFile=".\Debug/matlab.pch"
+				PrecompiledHeaderFile=".\Debug/matlabUob.pch"
 				AssemblerListingLocation=".\Debug/"
 				ObjectFile=".\Debug/"
 				ProgramDataBaseFileName=".\Debug/"
@@ -78,21 +78,21 @@
 				IgnoreImportLibrary="true"
 				LinkLibraryDependencies="false"
 				AdditionalDependencies="tgf.lib robottools.lib sg_vs2008_32.lib ul_vs2008_32.lib"
-				OutputFile=".\Debug/matlab.dll"
+				OutputFile=".\Debug/matlabUob.dll"
 				LinkIncremental="1"
 				SuppressStartupBanner="true"
 				AdditionalLibraryDirectories="../../../export/libd,../../windows/lib"
 				GenerateManifest="false"
 				EnableUAC="false"
 				IgnoreDefaultLibraryNames="LIBCMT"
-				ModuleDefinitionFile=".\matlab.def"
+				ModuleDefinitionFile=".\matlabUob.def"
 				GenerateDebugInformation="true"
-				ProgramDatabaseFile=".\Debug/matlab.pdb"
+				ProgramDatabaseFile=".\Debug/matlabUob.pdb"
 				GenerateMapFile="true"
-				MapFileName=".\Debug/matlab.map"
+				MapFileName=".\Debug/matlabUob.map"
 				RandomizedBaseAddress="1"
 				DataExecutionPrevention="0"
-				ImportLibrary=".\Debug/matlab.lib"
+				ImportLibrary=".\Debug/matlabUob.lib"
 				TargetMachine="1"
 			/>
 			<Tool
@@ -107,7 +107,7 @@
 			<Tool
 				Name="VCBscMakeTool"
 				SuppressStartupBanner="true"
-				OutputFile=".\Debug/matlab.bsc"
+				OutputFile=".\Debug/matlabUob.bsc"
 			/>
 			<Tool
 				Name="VCFxCopTool"
@@ -117,7 +117,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="copy $(TargetDir)*.dll $(SolutionDir)runtimed\drivers\matlab"
+				CommandLine="copy $(TargetDir)*.dll $(SolutionDir)runtimed\drivers\matlabUob"
 			/>
 		</Configuration>
 		<Configuration
@@ -149,7 +149,7 @@
 				MkTypLibCompatible="true"
 				SuppressStartupBanner="true"
 				TargetEnvironment="1"
-				TypeLibraryName=".\Release/matlab.tlb"
+				TypeLibraryName=".\Release/matlabUob.tlb"
 				HeaderFileName=""
 			/>
 			<Tool
@@ -157,12 +157,12 @@
 				Optimization="2"
 				InlineFunctionExpansion="1"
 				AdditionalIncludeDirectories="../../../export/include,../../windows/include,../../.."
-				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;matlab_EXPORTS"
+				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;MATLABUOB_EXPORTS"
 				StringPooling="true"
 				RuntimeLibrary="0"
 				BufferSecurityCheck="false"
 				EnableFunctionLevelLinking="false"
-				PrecompiledHeaderFile=".\Release/matlab.pch"
+				PrecompiledHeaderFile=".\Release/matlabUob.pch"
 				AssemblerListingLocation=".\Release/"
 				ObjectFile=".\Release/"
 				ProgramDataBaseFileName=".\Release/"
@@ -185,19 +185,19 @@
 				IgnoreImportLibrary="true"
 				LinkLibraryDependencies="false"
 				AdditionalDependencies="tgf.lib robottools.lib sg_vs2008_32.lib ul_vs2008_32.lib"
-				OutputFile=".\Release/matlab.dll"
+				OutputFile=".\Release/matlabUob.dll"
 				LinkIncremental="1"
 				SuppressStartupBanner="true"
 				AdditionalLibraryDirectories="../../../export/lib,../../windows/lib"
 				GenerateManifest="false"
 				EnableUAC="false"
-				ModuleDefinitionFile=".\matlab.def"
-				ProgramDatabaseFile=".\Release/matlab.pdb"
+				ModuleDefinitionFile=".\matlabUob.def"
+				ProgramDatabaseFile=".\Release/matlabUob.pdb"
 				GenerateMapFile="true"
-				MapFileName=".\Release/matlab.map"
+				MapFileName=".\Release/matlabUob.map"
 				RandomizedBaseAddress="1"
 				DataExecutionPrevention="0"
-				ImportLibrary=".\Release/matlab.lib"
+				ImportLibrary=".\Release/matlabUob.lib"
 				TargetMachine="1"
 			/>
 			<Tool
@@ -212,7 +212,7 @@
 			<Tool
 				Name="VCBscMakeTool"
 				SuppressStartupBanner="true"
-				OutputFile=".\Release/matlab.bsc"
+				OutputFile=".\Release/matlabUob.bsc"
 			/>
 			<Tool
 				Name="VCFxCopTool"
@@ -222,7 +222,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="copy $(TargetDir)*.dll $(SolutionDir)runtime\drivers\matlab"
+				CommandLine="copy $(TargetDir)*.dll $(SolutionDir)runtime\drivers\matlabUob"
 			/>
 		</Configuration>
 	</Configurations>
@@ -234,7 +234,7 @@
 			Filter="cpp;c;cxx;rc;def;r;odl;idl;hpj;bat"
 			>
 			<File
-				RelativePath="matlab.cpp"
+				RelativePath="matlabUob.cpp"
 				>
 				<FileConfiguration
 					Name="Debug|Win32"
@@ -256,7 +256,7 @@
 				</FileConfiguration>
 			</File>
 			<File
-				RelativePath="matlab.def"
+				RelativePath="matlabUob.def"
 				>
 			</File>
 			<File

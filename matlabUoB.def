@@ -1,5 +1,5 @@
 ;
-;   file                 : matlab.def
+;   file                 : matlabUoB.def
 ;   created              : Wed Jan 8 18:31:16 CET 2003
 ;   copyright            : (C) 2002 Bernhard Wymann
 ;
@@ -10,10 +10,10 @@
 ;    (at your option) any later version.                                 
 ;
 
-LIBRARY	matlab
+LIBRARY	matlabUoB
 
 SECTIONS .data READ WRITE
 
 EXPORTS
-	matlab
+	matlabUoB
 
