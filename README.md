@@ -1,3 +1,10 @@
+# Modified Simulink Robot for The Open Source Race Car Simulator (TORCS)
+This is a modified version of the [TORCSLink](https://github.com/VerifiableAutonomy/TORCSLink) interfaced, used by University of Bristol students for control trials.
+
+This version adds more sensors to the cars, similar to the car used in [Gym-TORCS](https://github.com/ugo-nama-kun/gym_torcs), which is based on vtorcs (https://github.com/giuse/vtorcs). The detailed explanation of original TORCS for AI research is given by Daniele Loiacono et al. (https://arxiv.org/pdf/1304.1672.pdf).
+
+Simulink example is identical to original one + some scopes to see the new sensor inputs.
+
 # Simulink Robot for The Open Source Race Car Simulator (TORCS)
 This robot plugin for [TORCS](http://torcs.sourceforge.net/) allows you to develop a vehicle control system in MATLAB and Simulink. An example Simulink model
 is provided which demonstrates an Automatic Cruise Control system. 
