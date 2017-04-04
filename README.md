@@ -5,6 +5,8 @@ This version adds more sensors to the cars, similar to the car used in [Gym-TORC
 
 Simulink example is identical to original one + some scopes to see the new sensor inputs.
 
+Please copy and replace the file ```patch\car.h``` from this repository into the folders ```\src\interfaces\``` and ```\export\include\``` of your TORCS source folder.
+
 # Simulink Robot for The Open Source Race Car Simulator (TORCS)
 This robot plugin for [TORCS](http://torcs.sourceforge.net/) allows you to develop a vehicle control system in MATLAB and Simulink. An example Simulink model
 is provided which demonstrates an Automatic Cruise Control system. 
