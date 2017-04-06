@@ -1,4 +1,4 @@
-/*  TORCSLink, an interface between TORCS and MATLAB/Simulink
+﻿/*  TORCSLink, an interface between TORCS and MATLAB/Simulink
 	Copyright(C) 2014 Owen McAree
 	Copyright(C) 2017 Erwin Lopez
 
@@ -28,6 +28,11 @@
        	#include <fcntl.h>
        	#include <errno.h>
 #endif
+
+/* NEW: Track sensor aggresiveness
+	0 = normal sensor 
+	1 = aggressive sensor */
+#define TRACK_SENSOR_AGR 0
 
 /* Enable this if you have modified your TORCS sourcecode to perform integration of 
 position data in doule precision rather than the default float. See <Insert link here> */

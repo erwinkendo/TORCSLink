@@ -122,10 +122,28 @@ static void newRace(int index, tCarElt* car, tSituation *sit) {
 	}*/
 	//if (SimpleParser::parse(initStr, std::string("init"), trackSensAngle[index], 19) == false)
 	//{
+		//for (int i = 0; i < 19; ++i) {
+		//	trackSensAngle[index][i] = -90 + 10 * i;
+		//}
+	//}
+	if (TRACK_SENSOR_AGR == 0) {
+		float a[19] = {-90, -75, -60, -45, -30, -20, -15, -10, - 5, 0, 5, 10, 15, 20, 30, 45, 60, 75, 90};
+		for (int i = 0; i < 19; ++i) {
+			trackSensAngle[index][i] = a[i];
+		}
+	}
+	else if (TRACK_SENSOR_AGR == 1) {
+		float a[19] = {-45, -19, -12, -7, -4, -2.5, -1.7, -1, -.5, 0, .5, 1, 1.7, 2.5, 4, 7, 12, 19, 45};
+		for (int i = 0; i < 19; ++i) {
+			trackSensAngle[index][i] = a[i];
+		}
+	}
+	else {
 		for (int i = 0; i < 19; ++i) {
 			trackSensAngle[index][i] = -90 + 10 * i;
 		}
-	//}
+	}
+		
 
 	focusSens[index] = new Sensors(car, 5);//ML
 	for (int i = 0; i < 5; ++i) {//ML
