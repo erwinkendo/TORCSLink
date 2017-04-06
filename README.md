@@ -6,6 +6,8 @@ This version adds more sensors to the cars, similar to the car used in [Gym-TORC
 Simulink example is identical to original one + some scopes to see the new sensor inputs.
 
 Please copy and replace the file ```patch\car.h``` from this repository into the folders ```\src\interfaces\``` and ```\export\include\``` of your TORCS source folder.
+## Track sensor
+The simulated range finder sensors, which returns the distance between the track edge and the car within a range of 200 meters, can be configured changing the default 10 degrees of separation between sensors, changing the variable ```TRACK_SENSOR_AGR``` inside ```TORCSLink.h``` or modifying the initialization function in ```matlabUoB.cpp```.
 
 # Simulink Robot for The Open Source Race Car Simulator (TORCS)
 This robot plugin for [TORCS](http://torcs.sourceforge.net/) allows you to develop a vehicle control system in MATLAB and Simulink. An example Simulink model
